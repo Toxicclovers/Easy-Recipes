@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Easy Recipes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      width: 420px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .tab {
+      background-color: #ffffff;
+      border: 2px solid #ccc;
+      padding: 14px;
+      width: 100%;
+      cursor: pointer;
+      font-size: 20px;
+      margin: 12px 0;
+      transition: background 0.3s;
+      border-radius: 6px;
+      text-align: left;
+      font-weight: bold;
+    }
+
+    .sub-tab {
+      background-color: #ffffff;
+      border: 1px solid #bbb;
+      padding: 10px;
+      width: 95%;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 6px auto;
+      transition: background 0.3s;
+      border-radius: 5px;
+      text-align: left;
+    }
+
+    .tab:hover, .sub-tab:hover {
+      background-color: #e0e0e0;
+    }
+
+    .content, .sub-content {
+      display: none;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    ul {
+      padding-left: 20px;
+      font-size: 14px;
+    }
+
+    .instructions {
+      margin-top: 10px;
+      font-size: 14px;
+      background-color: #f9f9f9;
+      padding: 10px;
+      border-left: 3px solid #aaa;
+    }
+
+    .instructions p {
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Easy Recipes</h1>
+
+    <!-- Low Calorie Meals Tab -->
+    <button class="tab" onclick="toggleTab('lowCal')">🥗 Low Calorie Meals</button>
+    <div class="content" id="lowCal">
+
+      <!-- Creamy Beef & Cheese Burritos -->
+      <button class="sub-tab" onclick="toggleTab('salad')">Creamy Beef & Cheese Burritos</button>
+      <div class="sub-content" id="salad">
+        <ul>
+          <li>1 Pound of Beef Mince</li>
+          <li>Half a White Onion</li>
+          <li>Salt & Pepper</li>
+          <li>2 Tablespoons of Garlic and Herb Tomato Paste</li>
+          <li>Sprinkle of Low-fat Grated Cheese</li>
+          <li>Low Calorie Tortillas</li>
+          <li>(Optional) Garlic Powder, Onion Powder, Chilli Powder</li>
+        </ul>
+        <div class="instructions">
+          <p><strong>Step 1:</strong> Take half the onion and chop it up into small pieces (about the size of Tic Tacs), then put it to the side.</p>
+          <p><strong>Step 2:</strong> Get the salt, pepper, and any other seasonings you've chosen, and set them aside.</p>
+          <p><strong>Step 3:</strong> Preheat a pan on medium heat for 2 minutes.</p>
+          <p><strong>Step 4:</strong> Put the diced onion into the pan and cook until it begins to show a little bit of color.</p>
+          <p><strong>Step 5:</strong> Add the beef mince to the pan and mix it around until it covers the pan and the onions are mixed in well.</p>
+          <p><strong>Step 6:</strong> Continue mixing until the mince is about 70% brown and 30% red.</p>
+          <p><strong>Step 7:</strong> Add salt, pepper, and a decent sprinkle of low-fat cheese until it covers 50% of the pan. Add any optional seasonings now too.</p>
+          <p><strong>Step 8:</strong> Continue mixing until all the red is gone and the cheese is melted.</p>
+          <p><strong>Step 9:</strong> Remove the pan from the element and get your tortillas ready.</p>
+          <p><strong>Step 10:</strong> Put a decent spoonful of the mince onto each tortilla and sprinkle a little more cheese on top. Then roll it up and close it (look online if unsure how to close a burrito).</p>
+          <p><strong>Final Step:</strong> Toast the burrito on the pan until both sides are nice and brown, then eat it or store it in the fridge until ready to eat.</p>
+        </div>
+      </div>
+
+      <!-- Cheesy Egg & Ham Pizza -->
+      <button class="sub-tab" onclick="toggleTab('zoodles')">Cheesy Egg & Ham Pizza</button>
+      <div class="sub-content" id="zoodles">
+        <ul>
+          <li>2-3 Eggs</li>
+          <li>Shredded Cheese (of your choice)</li>
+          <li>Salt & Pepper</li>
+          <li>Shredded Ham</li>
+          <li>Butter</li>
+        </ul>
+        <div class="instructions">
+          <p><strong>Step 1:</strong> Crack eggs into a bowl and whisk with a fork until fully mixed.</p>
+          <p><strong>Step 2:</strong> Lightly butter the pan on low heat until covered.</p>
+          <p><strong>Step 3:</strong> Pour the eggs into the pan and spread evenly.</p>
+          <p><strong>Step 4:</strong> Add sprinkles of cheese across the pan.</p>
+          <p><strong>Step 5:</strong> Sprinkle shredded ham until you're happy with the amount.</p>
+          <p><strong>Step 6:</strong> Put a lid on the pan and raise the heat to medium.</p>
+          <p><strong>Step 7:</strong> Check every minute until the top of the egg is fully cooked to your liking.</p>
+          <p><strong>Step 8:</strong> Slide the egg pizza carefully onto a plate (or eat directly from the pan once it cools).</p>
+          <p><strong>Final Step:</strong> (Optional) Add your favorite hot sauce or Kewpie mayo on top and enjoy!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- High Protein Meals Tab -->
+    <button class="tab" onclick="toggleTab('highProtein')">💪 High Protein Meals</button>
+    <div class="content" id="highProtein">
+
+      <!-- Chicken & Cottage Cheese Wraps -->
+      <button class="sub-tab" onclick="toggleTab('wraps')">Chicken & Cottage Cheese Wraps</button>
+      <div class="sub-content" id="wraps">
+        <ul>
+          <li>1 Chicken Breast (sliced or diced)</li>
+          <li>Salt & Pepper</li>
+          <li>Optional: Paprika, Garlic Powder</li>
+          <li>Cottage Cheese</li>
+          <li>Low Calorie or High Protein Wraps</li>
+          <li>(Optional) Hot Sauce or Spinach</li>
+        </ul>
+        <div class="instructions">
+          <p><strong>Step 1:</strong> Cut up the chicken breast into small chunks and season with salt, pepper, and optional spices.</p>
+          <p><strong>Step 2:</strong> Heat a pan on medium and cook chicken until golden and fully cooked (7–10 min).</p>
+          <p><strong>Step 3:</strong> Once done, let it cool slightly and prepare your wrap.</p>
+          <p><strong>Step 4:</strong> Spread cottage cheese inside the wrap, add chicken and optional extras like spinach or hot sauce.</p>
+          <p><strong>Final Step:</strong> Roll up tightly and either toast in pan or eat as is.</p>
+        </div>
+      </div>
+
+      <!-- Beef & Egg Scramble -->
+      <button class="sub-tab" onclick="toggleTab('beefegg')">Beef & Egg Scramble</button>
+      <div class="sub-content" id="beefegg">
+        <ul>
+          <li>100–150g Lean Minced Beef</li>
+          <li>2–3 Eggs</li>
+          <li>Salt, Pepper</li>
+          <li>Optional: Garlic Powder, Onion Powder, Paprika</li>
+        </ul>
+        <div class="instructions">
+          <p><strong>Step 1:</strong> Brown the mince in a pan on medium heat and season with salt, pepper, and any extras.</p>
+          <p><strong>Step 2:</strong> Once beef is nearly cooked, crack in eggs directly or scramble separately and pour in.</p>
+          <p><strong>Step 3:</strong> Mix everything together until eggs are cooked through and beef is no longer pink.</p>
+          <p><strong>Final Step:</strong> Serve immediately or store for later as a high-protein meal prep option.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function toggleTab(id) {
+      const content = document.getElementById(id);
+      content.style.display = content.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
+</body>
+</html>
